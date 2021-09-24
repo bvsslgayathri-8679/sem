@@ -1,0 +1,14 @@
+Stop words are available in abundance in any human language. By removing these words, we remove the 
+low-level information from our text in order to give more focus to the important information . 
+In order words , we can say that the removal of such words does not show any negative consequences 
+on the model we train for our task . Removal of stop words definitely reduces the dataset size and 
+thus reduces the training time due to the fewer number of tokens involved in the training .
+
+English has developed over the course of more than 1,400 years. The earliest forms of English , a group of West Germanic 
+(Ingvaeonic) dialects brought to Great Britain by Anglo-Saxon settlers in the 5th century ,
+ are collectively called Old English. Middle English began in the late 11th century with
+ the Norman conquest of England; this was a period in which English was influenced by Old French ,
+ in particular through its Old Norman dialect.[ 9 ][ 10 ] Early Modern English began in the late 
+15th century with the introduction of the printing press to London, the printing of 
+the King James Bible and the start of the Great Vowel Shift .[ 11 ]
+

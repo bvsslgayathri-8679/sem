@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Switchcase
+comment1.params=arg
+comment1.target=void\ main(java.lang.String[])
+comment2.params=n
+comment2.target=java.lang.String\ getday(int)
+numComments=3

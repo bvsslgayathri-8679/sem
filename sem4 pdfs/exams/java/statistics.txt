@@ -1,0 +1,4 @@
+num of alpha 13 
+ num of numbers 12
+ num of ts 3
+num of ssc1

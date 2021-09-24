@@ -1,0 +1,5 @@
+Total number of alphabets 889 
+Total number of numbers 14 
+Total number of terminating_symbols 215 
+Total number of special symbols 40 
+ 

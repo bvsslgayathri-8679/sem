@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "stack": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "random": "cpp",
+        "iostream": "cpp",
+        "variant": "cpp",
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp"
+    }
+}

@@ -1,0 +1,5 @@
+Stop words are available in abundance in any human language. By removing these words, we remove the 
+low-level information from our text in order to give more focus to the important information . 
+In order words , we can say that the removal of such words does not show any negative consequences 
+on the model we train for our task . Removal of stop words definitely reduces the dataset size and 
+thus reduces the training time due to the fewer number of tokens involved in the training .

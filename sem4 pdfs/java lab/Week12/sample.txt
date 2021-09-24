@@ -1,0 +1,45 @@
+import java.awt.*;
+import java.applet.*;
+public class Week12a extends Applet implements Runnable
+{
+    int x,y,value;
+    String string;
+    Thread t1;
+    public void init()
+    {
+        x=10;
+        y=150;
+        string="SRILEKHA";
+        value=1;
+        t1=new Thread(this);
+        t1.start();
+    }
+    public void update()
+    {
+        x=x+10*value;
+        if(x<100)
+        value=1;
+        if(x>300)
+        value=-1;
+    }
+    public void run()
+    {
+        while(true)
+        {
+        update();
+        repaint();
+        try{Thread.sleep(1000);}catch(Exception e){}
+        }
+    }
+    public void paint(Graphics g)
+    {
+        g.drawString(string,x,y);
+    }
+}
+
+
+
+
+
+C:\Program Files\Java\jdk-16.0.1\bin                                          
+C:\Program Files\Java\jdk-16.0.1\bin

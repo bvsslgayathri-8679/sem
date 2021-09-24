@@ -1,0 +1,4 @@
+Consider the universal relation R={ A,B,C,D,E,F,G,H,I} and the   
+     set of functional dependencies F={(A,B)->{C],{A}>{D,E},
+     {B}->{F},{F}->{G,H},{D}->[I,J}.what is the key for   
+      Decompose R into 2NF and 3NF relations

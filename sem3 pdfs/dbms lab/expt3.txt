@@ -1,0 +1,307 @@
+created a table emp .
+inserted some values
+
+
+displayed them 
+select * from emp;
+
+
+select salary from emp;
+avg salary:
+select avg(salary) from emp;
+
+delete tuple
+delete from emp where eid=8;
+
+all employees whose salary is greater than or equal to avg salary
+select empid from emp whese salary>=(select avg(salary) from emp)
+
+
+
+all employees whose salary is greater than avg salary
+select empid from emp whese salary>(select min(salary) from emp)
+
+alter tabe emp add(jp varchar(20));
+
+update values of table
+
+update emp set JP='c' where eid=1;
+
+
+avg salary of Nc,C
+select avg(salary) from emp where jp='c';
+
+select avg(salary) as avgclerksalary from emp where jp='c';
+
+select avg(salary) as avgnonclerksalary from emp where jp='nc';
+
+select avg(salary) from emp where jp='nc';
+
+count(*) will return including null
+
+ALL NUMERIC FUNCTIONS are to be in IN SELECT,WHERE,HAVING CLAUSE
+
+
+
+
+round(17.55,1)-->17.6
+round(17.55,0)-->18
+abs(-17)-->17
+power(5,2)-->25
+sqrt(16)-->4
+
+exp(n)-->e^n
+ceil(12.2)-->13
+floor(12.8)-->12
+rand() will return random number
+rand()*(10,100) will generate random num btn 10 to 100
+
+
+random number generation
+
+/*salary of a ranfom employee
+select salary from emp where id=rand()*(7-1+1)+1;*/
+
+rand does not work with where clause;
+
+
+select salary *floor(rand()*(7-1+1)+1) from emp;
+
+
+
+
+string functions
+
+len()
+concat()
+lower()
+upper()
+
+(will not change in actual table)
+
+
+
+select name from emp where name like 'a%';
+//starts with a
+select name from emp where name like 'a';
+//name is a
+
+
+select eid from emp where name like '___';
+//exactly 3 characters
+
+select eid from emp where name like '___%';
+
+//atlease 3 characters
+
+
+select eid from emp where name '%a%';
+//btn a
+
+
+
+DATE functions
+
+
+Experience:CURRENT_TIMESTAMP->returns curr date along with time
+DateADD(Date,Format,Days,Months,Years);
+
+
+
+
+
+DateDIFF->to know experience of a person
+
+
+-----------------------
+CONDITION ON ENTIRE DATABASE: GROUPBY
+CONDITION ON GROUPS :HAVING
+--------------
+GROUPBY:
+
+select jp,count(eid),avg(salary) from emp group by jp;
+
+
+
+HAVING:
+
+select avg(salary),count(eid) from emp group by jp having avg(salary)>10000;
+//where cant be used there
+
+
+
+
+
+condition on grp
+
+expt4
+9)
+select avg(sage) from sailors group by rating having count(sage)>=2;
+
+
+ avg age of sailor rating wise:
+select avg(sage),srating from sailor group by rating;
+
+
+with groupby we can apply only to selected attributes.
+
+
+____________________________________________________________________
+
+NESTED QUERY:in,not in,all,some,exist,not  exist etc...
+
+
+outer query and inner query...
+
+
+
+rules:
+in inner query we cant use orderby statement,grpby can be used..
+
+
+output of inner query will be input for outer
+
+
+all sailors who reserved a boat
+
+select sid from sailors where sid in (select sid from reserves)
+
+
+
+
+names of sailors who reserved a boat 103
+
+select sname from sailors where sid in (select sid from reserves where bid=103);
+
+
+name and age of youngest sailor
+
+select sname from sailor where sage =(select min(sage) from sailors)
+
+or 
+
+select sname from sailor where sage<=all(select sage from sailors)
+
+
+
+names of sailors whose rating is better than some sailor horito(complex query)
+
+select sname from sailor where srating >some(
+select srating from sailor where name='harito')
+
+names of sailors whose rating is better than all sailor horito(complex query)
+
+
+select sname from sailor where srating >ALL(
+select srating from sailor where name='harito')
+    or
+select sname from sailor where srating >ANY(
+select srating from sailor where name='harito')
+
+
+
+
+
+
+
+
+JOINS
+
+natural,inner,outer
+
+union intersection set operations
+
+
+
+
+all info of sailors who reserved boat no 101
+
+select sailor.sid,sailor.sname,sailor.sage from sailors,reserve where sailor.sid=reserve.sid and bid=101
+
+
+name sof sailors who reserved a red boat,list them in order of their age
+
+
+select sailor.sid,sailor.sname,sailor.sage from sailors,reserve,boat where sailor.sid=reserve.sid and reserve.bid=boat.bid and boat.bcolour=red order by sailor.sage;
+
+
+find ids and names of sailors who reserved 2 diff boats on same day
+
+
+select s,name from sailor s,reserve r1,reserve r2 where r1.bid=r2.bid and r1.day=r2.day and s.sid=r1.sid and s.sid=r2,sid
+
+/*
+select s1.sid,s1.sname from sailor s1,reserve r1 where exists (select s2.sid from sailor s2,reserve r2 where s1.bid!=b2.bid and r1.day=r2.day)
+*/
+
+
+
+
+
+
+View update 
+updating info of a viw and reflecting it in table
+
+
+
+
+
+
+
+facutly table
+
+
+create table faculty(id varchar(20),name varchar(20),dname varchar(20),salary number(20));
+
+
+insert into faculty values(...................);
+
+view:
+create view f_info as select * from faculty where dname='d1';
+desc f_info;
+
+update definition of view: 
+create or replace view finfo as select * from faculty where gname='D1';
+
+select * from f_info;
+select * from faculty info where dname='D1';
+
+
+drop view f_info;
+
+
+
+update a view: insert some data into view
+
+
+
+create view finfo as select id,name ,dname from faculty;
+
+create view finfo1 as select * from faculty where dname='D1';
+
+
+select * from finfo;
+select * from finfo1;
+
+
+select * from faculty;
+
+insert into finfo1 values('f7','raj','d1',100)
+
+
+select * from faculty;            \\f7 is inserted in actual table also   
+\\it means our views are updatable .... means we are allowed to update our views 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
