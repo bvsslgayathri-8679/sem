@@ -1,0 +1,16 @@
+<!ELEMENT college (teach,non-teach,student)>
+<!ELEMENT teach (teaching,teaching,teaching)>
+<!ELEMENT teaching (name,id,dept)>
+<!ELEMENT non-teach (nonteaching,nonteaching)>
+<!ELEMENT nonteaching (name,id,dept)>
+<!ELEMENT student (students,students)>
+<!ELEMENT students (name,roll,dept)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT roll (#PCDATA)>
+<!ELEMENT dept (#PCDATA)>
+<!ATTLIST teach category CDATA "teaching">
+<!ATTLIST non-teach category CDATA "non teaching">
+<!ATTLIST student category CDATA "student">
+
+

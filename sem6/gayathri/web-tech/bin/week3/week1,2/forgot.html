@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gvpce</title>
+    <style>
+        .containerr{
+            margin:2rem;
+            padding: 1rem;
+            background-image: url('https://t3.ftcdn.net/jpg/04/48/06/74/360_F_448067440_hTWoSx63cvavKS0qYDs1BR2Qg5C0JVB7.jpg');
+        }
+        center{
+            width: 80%;
+        }
+        p,label{
+            padding: 0.2rem;
+            margin: 0.2rem;
+            color: white;
+        }
+        input{
+            padding: 0.2rem;
+            margin: 0.2rem;
+            border-radius: 0.5rem;
+            border: 0.1rem black;
+
+        }
+        button{
+            padding: 0.2rem;
+            margin: 0.2rem;
+            border-radius: 0.5rem;
+            color: black;
+            background-color: white;
+        }
+        button:hover{
+            background-color: #33ADDB;
+            color: white;
+        }
+        a:hover{
+            color: white;
+        }
+        a{
+            color: #33ADDB;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+    <div class="containerr">
+        <div>
+            <h2 style="color: white;">Change password</h2>
+
+            <form class="formm"  name="formm"  method="post">
+                <label>Username</label>
+                <input name="name" type="text"><br>
+                <label>Password</label>
+                <input name="password" type="password"><br>
+                <label>Confirm Password</label>
+                <input name="password1" type="password"><br>
+        
+        
+            </form>
+            
+        </div>
+        <div class="">
+            <button type="submit" onclick="check()" style="margin-top: 1rem;margin-bottom:1rem">Change Password</button>
+
+    <p>Dont have an account <a href="./registration.html">Signup</a></p> 
+</div>
+</div>
+    </center>
+   
+</body>
+</html>

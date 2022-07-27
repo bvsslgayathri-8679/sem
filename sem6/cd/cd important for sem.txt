@@ -1,0 +1,43 @@
+Unit-1:
+1. Phases of compiler with example
+2. Functions of Lexical Analyzer
+3. Defining FA, RE, RG
+4. LEX Tool
+
+
+Unit-2:
+1. Defining CFG
+2. ALL TYPES OF GRAMMARS WITH DIFFERENT PARSERS
+3. FIRST, FOLLOW, LR item generation
+4. Constructing parse trees for given grammar & string
+
+
+Unit-3:
+1. Storage Allocation strategies( about stack, heap)
+2. Type checker
+3. Type Equivalence
+4. Type Expressions
+5. Type conversion
+
+
+Unit-4: 
+1. Symbol Table management (about list, binary trees, hash tables)
+2. Activation Record 
+3. Scope ( static, dynamic)
+4. Importance of Intermediate Code generation
+5. Intermediate code generation techniques ( about syntax tree, rpn, tac)
+6. TAC Forms ( quadruples, triples, indirect triples)
+7. Abstract syntax tree, annotated syntax tree
+8. Synthesized, Inherited Attributes
+9. SDD
+
+
+
+Unit-5:
+1. Issues in code generation 
+2. Generic CG alg 
+3. CG alg with syntax tree
+3. Flow graph
+4. Defining Leader,  block
+5. Code optimization techniques
+6. Peephole optimization
